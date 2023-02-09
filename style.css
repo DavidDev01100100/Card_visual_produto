@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-color: hsl(30, 38%, 92%);
+}
+
+
+.container {
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.card {
+    background-color:  hsl(0, 0%, 100%);
+    max-width: 700px;
+    display: grid;  
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.img img {
+    max-width: 100%;
+    display: inherit;
+}
+.card-container {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-titulo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+.card-nome {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+.card-descricao {
+    color: hsl(228, 12%, 48%);
+    line-height:1.6em;
+}
+
+.preco {
+    display: flex;
+    align-items: center;
+}
+.desc {
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    font-size: 40px;
+    padding-right: 25px;
+}
+
+.valor {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+.but {
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 12px 0;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    width: 100%;
+}
+.but:hover {
+    background-color: hsl(158, 36%, 23%);
+}
+
+button img {
+    padding-right: 7px;
+}
+
+.rodape { 
+    font-size: 11px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 628px){
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .img img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-container {
+        display: block;
+    }
+    h1.card-titulo, h2.card-nome, p.card-descricao, .preco {
+        padding-bottom: 23px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .container {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    .img img {
+        max-height: 300px;
+    }
+    .card-container {
+        padding: 24px;
+    }
+    h1.card-titulo, h2.card-nome, p.card-descricao, .preco {
+        padding-bottom: 16px;
+    }
+    h2.card-nome {
+        font-size: 28px;
+    }
+    p.card-descricao {
+        font-size: 12px;
+    }
+    p.desc {
+        font-size: 23px;
+    }
+    button.but {
+        padding: 12px 0;
+        font-size: 11px;
+    }
+}
